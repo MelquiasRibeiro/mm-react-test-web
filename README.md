@@ -1,4 +1,4 @@
-# Git-Interface
+# SpotifyPlaylist
 Uma [aplicação](http://spotify.surge.sh/) construída com React utilizando a API do **Spotify**.
 
 Nesta aplicação o usurio pode buscar e salvar repositórios do _gitHub_ e consultar informaçoes especificas sobre estes repositório. 
