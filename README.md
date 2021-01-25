@@ -1,7 +1,7 @@
 # SpotifyPlaylist
 Uma [aplicação](http://spotify.surge.sh/) construída com React utilizando a API do **Spotify**.
 
-Nesta aplicação o usurio pode buscar e salvar repositórios do _gitHub_ e consultar informaçoes especificas sobre estes repositório. 
+Nesta aplicação o usurio pode buscar playlist do spotify. 
 
 ## telas:
 ![Screenshot from 2021-01-24 23-35-48](https://user-images.githubusercontent.com/54459438/105655156-49be8b00-5e9e-11eb-868e-762c5f3600de.png)
