@@ -1,7 +1,7 @@
 # SpotifyPlaylist
-Uma [aplicação](http://spotify.surge.sh/) construída com React utilizando a API do **Spotify**.
+Uma aplicação construída com React utilizando a API do **Spotify**.
 
-Nesta aplicação o usurio pode buscar playlist do spotify. 
+Nesta aplicação o usurio pode buscar playlist do spotify.
 
 ## telas:
 o desing foi pensado com base no [protótipo](https://www.figma.com/file/8I9w0tqPRdmVIGmWVcPQnV/SpotifyreDesign?node-id=0%3A1) feito no Figma
@@ -11,9 +11,6 @@ o desing foi pensado com base no [protótipo](https://www.figma.com/file/8I9w0tq
 1. clone o projeto em sua maquina ```git clone https://github.com/MelquiasRibeiro/mm-react-test-web.git```;
 2. instale as dependencias necessárias ```npm install```;
 3. inicie o projeto ```npm start``` e acesse localhost:3000.
-
-**obs: pode ser necessario renovar o [token](https://developer.spotify.com/console/get-featured-playlists/) de acesso a APi do SPOTIFY **
-
 
 ## Conceitos abordados neste projeto:
 + Padronização de código com [Eslint](https://eslint.org/) e [Prettier](https://prettier.io/);
