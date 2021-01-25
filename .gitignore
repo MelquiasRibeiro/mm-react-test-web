@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+/src/services/credentials.js
 # production
 /build
 

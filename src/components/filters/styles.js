@@ -21,8 +21,10 @@ export const FiltersGroup = styled.div`
 export const Form = styled.form`
     display: flex;
     flex: 1;
-    flex-direction: row;
     justify-content: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
     input {
         background: #23262b;
         border-radius: 8px;
@@ -31,6 +33,9 @@ export const Form = styled.form`
         font-size: 16px;
         color: #c4c4c4;
         margin: 0 16px;
+        @media (max-width: 768px) {
+            margin: 8px 16px;
+        }
     }
 `;
 
@@ -46,4 +51,7 @@ export const Select = styled.select`
     font-size: 16px;
     color: #c4c4c4;
     margin: 0 16px;
+    @media (max-width: 768px) {
+        margin: 8px 16px;
+    }
 `;

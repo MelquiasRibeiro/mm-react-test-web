@@ -36,6 +36,12 @@ export const Grid = styled.ul`
     list-style: none;
     grid-gap: 32px 72px;
     margin-bottom: 72px;
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 450px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `;
 
 export const ItemGrind = styled.div`

@@ -28,7 +28,7 @@ export default function index({ setFilters }) {
     }, [erro]);
 
     function formatParams() {
-        const params = `${selectecountry}?${selectedLocale}?${timestamp}`;
+        const params = `?${selectecountry}?${selectedLocale}?${timestamp}`;
         setFilters(params);
     }
 
