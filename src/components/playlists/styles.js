@@ -1,5 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg)
+  }
+`;
 export const Container = styled.div`
     margin: 64px 0px;
 `;
@@ -14,6 +22,13 @@ export const GridContainer = styled.div`
     display: flex;
     flex: 1;
     justify-content: center;
+    ${(props) =>
+        props.loading &&
+        css`
+            svg {
+                animation: ${rotate} 2s infinite;
+            }
+        `}
 `;
 export const Grid = styled.ul`
     display: grid;

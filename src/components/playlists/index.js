@@ -1,76 +1,23 @@
 import React from 'react';
+
 import { Container, Title, GridContainer, Grid, ItemGrind } from './styles';
 
-export default function index() {
+export default function index({ playlists }) {
     return (
         <Container>
             <Title>Playlists</Title>
             <GridContainer>
                 <Grid>
-                    <ItemGrind>
-                        <img
-                            src="https://i.scdn.co/image/e6b635ebe3ef4ba22492f5698a7b5d417f78b88a"
-                            alt="playlist tumb"
-                        />
-                        <h1>title</h1>
-                        <p>artist</p>
-                    </ItemGrind>
-                    <ItemGrind>
-                        <img
-                            src="https://i.scdn.co/image/e6b635ebe3ef4ba22492f5698a7b5d417f78b88a"
-                            alt="playlist tumb"
-                        />
-                        <h1>title</h1>
-                        <p>artist</p>
-                    </ItemGrind>
-                    <ItemGrind>
-                        <img
-                            src="https://i.scdn.co/image/e6b635ebe3ef4ba22492f5698a7b5d417f78b88a"
-                            alt="playlist tumb"
-                        />
-                        <h1>title</h1>
-                        <p>artist</p>
-                    </ItemGrind>
-                    <ItemGrind>
-                        <img
-                            src="https://i.scdn.co/image/e6b635ebe3ef4ba22492f5698a7b5d417f78b88a"
-                            alt="playlist tumb"
-                        />
-                        <h1>title</h1>
-                        <p>artist</p>
-                    </ItemGrind>
-                    <ItemGrind>
-                        <img
-                            src="https://i.scdn.co/image/e6b635ebe3ef4ba22492f5698a7b5d417f78b88a"
-                            alt="playlist tumb"
-                        />
-                        <h1>title</h1>
-                        <p>artist</p>
-                    </ItemGrind>
-                    <ItemGrind>
-                        <img
-                            src="https://i.scdn.co/image/e6b635ebe3ef4ba22492f5698a7b5d417f78b88a"
-                            alt="playlist tumb"
-                        />
-                        <h1>title</h1>
-                        <p>artist</p>
-                    </ItemGrind>
-                    <ItemGrind>
-                        <img
-                            src="https://i.scdn.co/image/e6b635ebe3ef4ba22492f5698a7b5d417f78b88a"
-                            alt="playlist tumb"
-                        />
-                        <h1>title</h1>
-                        <p>artist</p>
-                    </ItemGrind>
-                    <ItemGrind>
-                        <img
-                            src="https://i.scdn.co/image/e6b635ebe3ef4ba22492f5698a7b5d417f78b88a"
-                            alt="playlist tumb"
-                        />
-                        <h1>title</h1>
-                        <p>artist</p>
-                    </ItemGrind>
+                    {playlists.map((playlist) => (
+                        <ItemGrind key={playlist.id}>
+                            <img
+                                src={playlist.images[0].url}
+                                alt="playlist tumb"
+                            />
+                            <h1>{playlist.name}</h1>
+                            <p>{playlist.description}</p>
+                        </ItemGrind>
+                    ))}
                 </Grid>
             </GridContainer>
         </Container>
