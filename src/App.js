@@ -8,8 +8,9 @@ import { token } from './services/token';
 function App() {
     const [filters, setFilters] = useState();
     const [playlists, setPlaylists] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
+    function getPlayLists() {
         axios
             .get(
                 `https://api.spotify.com/v1/browse/featured-playlists?${
@@ -23,12 +24,24 @@ function App() {
             )
             .then((response) => {
                 setPlaylists(response.data.playlists.items);
+                setLoading(false);
             })
             .catch((error) => {
                 const erro = error;
                 return erro;
             });
+    }
+    // new get when filters change
+    useEffect(() => {
+        getPlayLists();
     }, [filters]);
+
+    // new get every 30 seconds
+    useEffect(() => {
+        setInterval(() => {
+            getPlayLists();
+        }, 30000);
+    }, []);
 
     return (
         <>
@@ -36,7 +49,7 @@ function App() {
                 <img src={logo} alt="Logo" />
             </header>
             <Filters setFilters={setFilters} />
-            <Playlists playlists={playlists} />
+            <Playlists playlists={playlists} loading={loading} />
         </>
     );
 }

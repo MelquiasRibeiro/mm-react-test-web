@@ -5,11 +5,11 @@ import { Container, Title, FiltersGroup, Select, Form } from './styles';
 
 export default function index({ setFilters }) {
     const [locales, setLocales] = useState([]);
-    const [selectedLocale, setSelecteLocale] = useState(0);
+    const [selectedLocale, setSelecteLocale] = useState('');
     const [countries, setCountries] = useState([]);
-    const [selectecountry, setSelectecountry] = useState(0);
+    const [selectecountry, setSelectecountry] = useState('');
     const [name, setName] = useState('');
-    // const [timestamp, setTimestamp] = useState();
+    const [timestamp, setTimestamp] = useState('');
     const [erro, setError] = useState();
 
     useEffect(() => {
@@ -21,20 +21,20 @@ export default function index({ setFilters }) {
             })
             .catch((error) => {
                 setError(error);
-                alert(
+                console.log(
                     `por favor, recarregue a página, houve um erro ERROR:${erro}`
                 );
             });
     }, [erro]);
 
     function formatParams() {
-        const params = `?${selectedLocale}?${selectecountry}`;
+        const params = `${selectecountry}?${selectedLocale}?${timestamp}`;
         setFilters(params);
     }
 
     useEffect(() => {
         formatParams();
-    }, [selectedLocale, selectecountry]);
+    }, [selectedLocale, selectecountry, timestamp]);
     return (
         <Container>
             <Title> Filters </Title>
@@ -62,7 +62,10 @@ export default function index({ setFilters }) {
                             </option>
                         ))}
                     </Select>
-                    <input type="datetime-local" />
+                    <input
+                        type="datetime-local"
+                        onChange={(e) => setTimestamp(e.target.value)}
+                    />
 
                     <input
                         type="text"
